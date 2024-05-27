@@ -2,7 +2,7 @@ package calculator;
 
 import java.util.Stack;
 
-import java.util.Scanner;
+
 /**
 *@param numero1 (esta antes del operador)
 * @param numero2 (esta despues del operador)
