@@ -4,6 +4,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -70,7 +72,7 @@ public class interfaz extends JFrame {
             resultado.setForeground(Color.WHITE);
             resultado.setHorizontalAlignment(SwingConstants.LEFT);
             resultado.setFont(new Font("Arial", Font.BOLD, 42));
-            resultado.setBounds(0, 54, 282, 51);
+            resultado.setBounds(5, 36, 282, 51);
             contentPane.add(resultado);
 
             Borrar.addActionListener(new ActionListener() {
@@ -86,6 +88,28 @@ public class interfaz extends JFrame {
              * A su vez asignamos un valor para el valor operador	 */
 
             
+            JButton punto = new JButton(".");
+            punto.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+            punto.setHorizontalTextPosition(SwingConstants.CENTER);
+            punto.setForeground(Color.WHITE);
+            punto.setFont(new Font("Arial", Font.BOLD, 20));
+            punto.setBorder(null);
+            punto.setBackground(new Color(0, 0, 0, 0));
+            punto.setBounds(80, 395, 52, 61);
+            
+            
+            punto.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                	
+                	
+                	operador=".";
+                	
+                	 operacion.setText(operacion.getText() + operador);
+                }
+            });        
+
+
+            contentPane.add(punto);
             
             
             JButton mas = new JButton("+");	
@@ -117,7 +141,7 @@ public class interfaz extends JFrame {
         menos.setFont(new Font("Arial", Font.BOLD, 30));
         menos.setBorder(null);
         menos.setBackground(new Color(0, 0, 0, 0));
-        menos.setBounds(145, 137, 60, 60);
+        menos.setBounds(145, 140, 60, 60);
         contentPane.add(menos);
         menos.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -487,7 +511,7 @@ public class interfaz extends JFrame {
         division.setFont(new Font("Arial", Font.BOLD, 20));
         division.setBorder(null);
         division.setBackground(new Color(0, 0, 0, 0));
-        division.setBounds(212, 219, 60, 60);
+        division.setBounds(212, 225, 60, 60);
         contentPane.add(division);
 
         division.addActionListener(new ActionListener() {
@@ -505,7 +529,7 @@ public class interfaz extends JFrame {
         raiz.setFont(new Font("Arial", Font.BOLD, 20));
         raiz.setBorder(null);
         raiz.setBackground(new Color(0, 0, 0, 0));
-        raiz.setBounds(211, 299, 60, 60);
+        raiz.setBounds(212, 310, 60, 60);
         raiz.addActionListener(new ActionListener() {
         	
             public void actionPerformed(ActionEvent e) {
@@ -529,7 +553,7 @@ public class interfaz extends JFrame {
         igual.setFont(new Font("Arial", Font.BOLD, 20));
         igual.setBorder(null);
         igual.setBackground(new Color(0, 0, 0, 0));
-        igual.setBounds(212, 370, 60, 60);
+        igual.setBounds(212, 390, 60, 60);
 
         /**
          * El botón igual contiene los @param numero2 
@@ -539,11 +563,13 @@ public class interfaz extends JFrame {
         igual.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	
-            	
+           	
             	String expresion = operacion.getText();
                 double resultadoCalculado;
                 resultadoCalculado = calculadora.evaluarExpresion(expresion);
+                
                     resultado.setText(Double.toString(resultadoCalculado));
+                    operacion.setText("");
                }
             	
             	
@@ -553,28 +579,20 @@ public class interfaz extends JFrame {
         // Agrega el botón igual al contenedor (suponiendo que el código para "igual" ya está definido)
    
         contentPane.add(igual);
+       
         
-        JButton punto = new JButton(".");
-        punto.setIcon(new ImageIcon("C:\\Users\\Guillermo\\eclipse-workspace\\calculator\\numeros.jpg"));
-        punto.setHorizontalTextPosition(SwingConstants.CENTER);
-        punto.setForeground(Color.WHITE);
-        punto.setFont(new Font("Arial", Font.BOLD, 20));
-        punto.setBorder(null);
-        punto.setBackground(new Color(0, 0, 0, 0));
-        punto.setBounds(80, 395, 52, 61);
+        JButton btnB = new JButton("");
+        btnB.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\borrar.jpg"));
+        btnB.setHorizontalTextPosition(SwingConstants.CENTER);
+        btnB.setForeground(Color.WHITE);
+        btnB.setFont(new Font("Arial", Font.BOLD, 20));
+        btnB.setBorder(null);
+        btnB.setBackground(new Color(0, 0, 0, 0));
+        btnB.setBounds(237, 81, 35, 35);
         
+        btnB.addActionListener(new ButtonActionHandler(operacion, resultado));
         
-        punto.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                
-               
-            	
-            	
-            }
-        });        
-
-
-        contentPane.add(punto);
+        contentPane.add(btnB);
         
         
    

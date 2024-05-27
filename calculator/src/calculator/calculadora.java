@@ -1,17 +1,12 @@
 package calculator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
-
-/**
-*@param numero1 (esta antes del operador)
-* @param numero2 (esta despues del operador)
- */
-
-
-
-
 public class calculadora {
+    private static List<Object> historial = new ArrayList<>();
+
     // Método principal para evaluar una expresión matemática
     public static double evaluarExpresion(String expresion) throws ArithmeticException {
         // Verificar si la expresión es nula o vacía
@@ -22,8 +17,8 @@ public class calculadora {
         try {
             Stack<Double> numeros = new Stack<>();
             Stack<String> operadores = new Stack<>();
-
-            double numero = 0.0;
+            StringBuilder numero = new StringBuilder();
+            historial.clear(); // Limpiar el historial antes de evaluar una nueva expresión
 
             // Iterar sobre cada carácter de la expresión
             for (int i = 0; i < expresion.length(); i++) {
@@ -36,11 +31,16 @@ public class calculadora {
 
                 // Si el carácter es un dígito o un punto decimal, construir el número
                 if (Character.isDigit(caracter) || caracter == '.') {
-                    numero = numero * 10 + Character.getNumericValue(caracter);
+                    numero.append(caracter);
+                    
                 } else if ("+-x/√".indexOf(caracter) != -1) { // Verificar si es un operador válido
                     // Agregar el número a la pila
-                    numeros.push(numero);
-                    numero = 0.0;
+                    if (numero.length() > 0) {
+                        double num = Double.parseDouble(numero.toString());
+                        numeros.push(num);
+                        historial.add(num);
+                        numero.setLength(0);
+                    }
 
                     // Procesar operadores con mayor precedencia
                     while (!operadores.isEmpty() && tienePrecedencia(String.valueOf(caracter), operadores.peek())) {
@@ -49,24 +49,35 @@ public class calculadora {
 
                     // Agregar el operador actual a la pila de operadores
                     operadores.push(String.valueOf(caracter));
+                    historial.add(String.valueOf(caracter));
 
                 } else if (caracter == '(') {
                     operadores.push(String.valueOf(caracter));
+                    historial.add(String.valueOf(caracter));
                 } else if (caracter == ')') {
                     // Agregar el número a la pila
-                    numeros.push(numero);
-                    numero = 0.0;
+                    if (numero.length() > 0) {
+                        double num = Double.parseDouble(numero.toString());
+                        numeros.push(num);
+                        historial.add(num);
+                        numero.setLength(0);
+                    }
 
                     // Realizar operaciones dentro del paréntesis
                     while (!operadores.isEmpty() && !operadores.peek().equals("(")) {
                         realizarOperacion(numeros, operadores);
                     }
                     operadores.pop(); // Pop del '('
+                    historial.add(")");
                 }
             }
 
             // Agregar el último número a la pila
-            numeros.push(numero);
+            if (numero.length() > 0) {
+                double num = Double.parseDouble(numero.toString());
+                numeros.push(num);
+                historial.add(num);
+            }
 
             // Realizar operaciones restantes
             while (!operadores.isEmpty()) {
@@ -124,8 +135,34 @@ public class calculadora {
             }
         }
     }
-    
 
+    // Método para borrar el último elemento introducido
+    public static void borrarUltimoElemento() {
+        if (historial.isEmpty()) {
+            throw new IllegalStateException("No hay elementos para borrar");
+        }
+
+        Object ultimoElemento = historial.remove(historial.size() - 1);
+
+        if (ultimoElemento instanceof Double) {
+            // Si es un número, removerlo de la pila de números
+            Stack<Double> numeros = new Stack<>();
+            for (Object item : historial) {
+                if (item instanceof Double) {
+                    numeros.push((Double) item);
+                }
+            }
+        } else if (ultimoElemento instanceof String) {
+            String ultimoOperador = (String) ultimoElemento;
+            if ("+-x/√".contains(ultimoOperador)) {
+                // Si es un operador, removerlo de la pila de operadores
+                Stack<String> operadores = new Stack<>();
+                for (Object item : historial) {
+                    if (item instanceof String) {
+                        operadores.push((String) item);
+                    }
+                }
+            }
+        }
+    }
 }
-
-
