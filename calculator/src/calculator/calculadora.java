@@ -96,7 +96,7 @@ public class calculadora {
         if (operador2.equals("(") || operador2.equals(")")) {
             return false;
         }
-        if (("x/".contains(operador1) && "+-".contains(operador2))) {
+        if (("x/".contains(operador1) && "+-√".contains(operador2))) {
             return false;
         }
         return true;
@@ -116,12 +116,21 @@ public class calculadora {
             double numero2 = numeros.pop();
             double numero1 = numeros.pop();
             switch (op) {
+            
+            case "√":
+                numeros.push(numero1 + numero2);
+                break;
+            
+            
                 case "+":
                     numeros.push(numero1 + numero2);
                     break;
                 case "-":
                     numeros.push(numero1 - numero2);
                     break;
+                    
+                    
+                    
                 case "x":
                     numeros.push(numero1 * numero2);
                     break;

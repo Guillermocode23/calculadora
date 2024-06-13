@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-import java.awt.Toolkit;
+
 import java.awt.Dialog.ModalExclusionType;
 
 
@@ -40,7 +40,7 @@ public class interfaz extends JFrame {
     	setResizable(false);
     	setForeground(new Color(255, 128, 192));
     	setFont(new Font("French Script MT", Font.PLAIN, 16));
-    	setIconImage(Toolkit.getDefaultToolkit().getImage("C:\\Users\\Guillermo\\AppData\\Local\\Microsoft\\Windows\\INetCache\\IE\\D40JG7F4\\eda5c4eae0acc7586b2fa6a3744fb8fc[1].jpg"));
+    	
     	setTitle("calculadora belica");
     	setBackground(new Color(255, 128, 192));
     		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -53,7 +53,8 @@ public class interfaz extends JFrame {
     		JButton Borrar = new JButton("C");
     		Borrar.setSelectedIcon(null);
             Borrar.setHorizontalTextPosition(SwingConstants.CENTER);
-            Borrar.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\boton2.jpg"));
+            Borrar.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton1.jpg"));
+            Borrar.setRolloverIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton2.jpg"));
             Borrar.setBackground(new Color(0, 0, 0, 0)); // Fondo transparente
             Borrar.setForeground(Color.WHITE);
             Borrar.setFont(new Font("Arial", Font.BOLD, 20));
@@ -89,7 +90,7 @@ public class interfaz extends JFrame {
 
             
             JButton punto = new JButton(".");
-            punto.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+            punto.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
             punto.setHorizontalTextPosition(SwingConstants.CENTER);
             punto.setForeground(Color.WHITE);
             punto.setFont(new Font("Arial", Font.BOLD, 20));
@@ -113,7 +114,8 @@ public class interfaz extends JFrame {
             
             
             JButton mas = new JButton("+");	
-            mas.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\boton1.jpg"));
+            mas.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\Sin título.png"));
+            mas.setRolloverIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton1.jpg"));
             mas.setHorizontalTextPosition(SwingConstants.CENTER);
             mas.setForeground(Color.WHITE);
             mas.setFont(new Font("Arial", Font.BOLD, 20));
@@ -135,7 +137,8 @@ public class interfaz extends JFrame {
     
         
         JButton menos = new JButton("-");
-        menos.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\boton1.jpg"));
+        menos.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\Sin título.png"));
+       menos.setRolloverIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton1.jpg"));
         menos.setHorizontalTextPosition(SwingConstants.CENTER);
         menos.setForeground(Color.WHITE);
         menos.setFont(new Font("Arial", Font.BOLD, 30));
@@ -155,7 +158,8 @@ public class interfaz extends JFrame {
         );
         JButton por = new JButton("X");
         por.setSelectedIcon(null);
-        por.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\boton1.jpg"));
+        por.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\Sin título.png"));
+        por.setRolloverIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton1.jpg"));
         por.setHorizontalTextPosition(SwingConstants.CENTER);
         por.setForeground(Color.WHITE);
         por.setFont(new Font("Arial", Font.BOLD, 15));
@@ -175,7 +179,7 @@ public class interfaz extends JFrame {
 
         
         JButton uno = new JButton("1");
-        	uno.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        	uno.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         	uno.setHorizontalTextPosition(SwingConstants.CENTER);
         	uno.setForeground(Color.WHITE);
         	uno.setFont(new Font("Arial", Font.BOLD, 20));
@@ -213,7 +217,7 @@ public class interfaz extends JFrame {
     
         
         JButton dos = new JButton("2");
-        dos.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        dos.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         dos.setHorizontalTextPosition(SwingConstants.CENTER);
         dos.setForeground(Color.WHITE);
         dos.setFont(new Font("Arial", Font.BOLD, 20));
@@ -248,7 +252,7 @@ public class interfaz extends JFrame {
         });
     
         JButton tres = new JButton("3");
-        tres.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        tres.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         tres.setHorizontalTextPosition(SwingConstants.CENTER);
         tres.setForeground(Color.WHITE);
         tres.setFont(new Font("Arial", Font.BOLD, 20));
@@ -281,7 +285,7 @@ public class interfaz extends JFrame {
         });
 
         JButton cuatro = new JButton("4");
-        cuatro.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        cuatro.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         cuatro.setHorizontalTextPosition(SwingConstants.CENTER);
         cuatro.setForeground(Color.WHITE);
         cuatro.setFont(new Font("Arial", Font.BOLD, 20));
@@ -313,7 +317,7 @@ public class interfaz extends JFrame {
         });
 
         JButton cinco = new JButton("5");
-        cinco.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        cinco.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         cinco.setHorizontalTextPosition(SwingConstants.CENTER);
         cinco.setForeground(Color.WHITE);
         cinco.setFont(new Font("Arial", Font.BOLD, 20));
@@ -345,7 +349,7 @@ public class interfaz extends JFrame {
             }
         });
         JButton seis = new JButton("6\r\n");
-        seis.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        seis.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         seis.setHorizontalTextPosition(SwingConstants.CENTER);
         seis.setForeground(Color.WHITE);
         seis.setFont(new Font("Arial", Font.BOLD, 20));
@@ -377,7 +381,7 @@ public class interfaz extends JFrame {
         });
         
         JButton siete = new JButton("7");
-        siete.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        siete.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         siete.setHorizontalTextPosition(SwingConstants.CENTER);
         siete.setForeground(Color.WHITE);
         siete.setFont(new Font("Arial", Font.BOLD, 20));
@@ -410,7 +414,7 @@ public class interfaz extends JFrame {
         });
         
         JButton ocho = new JButton("8");
-        ocho.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        ocho.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         ocho.setHorizontalTextPosition(SwingConstants.CENTER);
         ocho.setForeground(Color.WHITE);
         ocho.setFont(new Font("Arial", Font.BOLD, 20));
@@ -443,7 +447,7 @@ public class interfaz extends JFrame {
         });
         
         JButton nueve = new JButton("9");
-        nueve.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        nueve.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         nueve.setHorizontalTextPosition(SwingConstants.CENTER);
         nueve.setForeground(Color.WHITE);
         nueve.setFont(new Font("Arial", Font.BOLD, 20));
@@ -465,7 +469,7 @@ public class interfaz extends JFrame {
         });
         
         JButton cero = new JButton("0");
-        cero.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\numeros.jpg"));
+        cero.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         cero.setHorizontalTextPosition(SwingConstants.CENTER);
         cero.setForeground(Color.WHITE);
         cero.setFont(new Font("Arial", Font.BOLD, 20));
@@ -505,8 +509,8 @@ public class interfaz extends JFrame {
         
         
         JButton division = new JButton("/");
-        division.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\boton1.jpg"));
-        division.setHorizontalTextPosition(SwingConstants.CENTER);
+        division.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\Sin título.png"));
+        division.setRolloverIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton1.jpg"));        division.setHorizontalTextPosition(SwingConstants.CENTER);
         division.setForeground(Color.WHITE);
         division.setFont(new Font("Arial", Font.BOLD, 20));
         division.setBorder(null);
@@ -523,7 +527,8 @@ public class interfaz extends JFrame {
             }
         });
         JButton raiz = new JButton("√");
-        raiz.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\boton1.jpg"));
+        raiz.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\Sin título.png"));
+        raiz.setRolloverIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton1.jpg"));
         raiz.setHorizontalTextPosition(SwingConstants.CENTER);
         raiz.setForeground(Color.WHITE);
         raiz.setFont(new Font("Arial", Font.BOLD, 20));
@@ -545,8 +550,9 @@ public class interfaz extends JFrame {
         
         JButton igual = new JButton("=");
         
-        igual.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\boton2.jpg"));
-       
+        igual.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton1.jpg"));
+        
+        igual.setRolloverIcon(new ImageIcon("C:\\Users\\Guillermo\\Documents\\calculadora\\calculator\\boton2.jpg"));
 
         igual.setHorizontalTextPosition(SwingConstants.CENTER);
         igual.setForeground(Color.WHITE);
@@ -563,7 +569,6 @@ public class interfaz extends JFrame {
         igual.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	
-           	
             	String expresion = operacion.getText();
                 double resultadoCalculado;
                 resultadoCalculado = calculadora.evaluarExpresion(expresion);
@@ -582,13 +587,13 @@ public class interfaz extends JFrame {
        
         
         JButton btnB = new JButton("");
-        btnB.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\calculadora\\calculator\\borrar.jpg"));
+        btnB.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\borrar.png"));
         btnB.setHorizontalTextPosition(SwingConstants.CENTER);
         btnB.setForeground(Color.WHITE);
         btnB.setFont(new Font("Arial", Font.BOLD, 20));
         btnB.setBorder(null);
         btnB.setBackground(new Color(0, 0, 0, 0));
-        btnB.setBounds(237, 81, 35, 35);
+        btnB.setBounds(212, 82, 60, 34);
         
         btnB.addActionListener(new ButtonActionHandler(operacion, resultado));
         
