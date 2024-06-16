@@ -93,10 +93,8 @@ public class calculadora {
 
     // Método para verificar la precedencia de los operadores
     private static boolean tienePrecedencia(String operador1, String operador2) {
-        if (operador2.equals("(") || operador2.equals(")")) {
-            return false;
-        }
-        if (("x/".contains(operador1) && "+-√".contains(operador2))) {
+        
+        if (("x/".contains(operador1) && "+-".contains(operador2))) {
             return false;
         }
         return true;
@@ -105,43 +103,41 @@ public class calculadora {
     // Método para realizar operaciones aritméticas
     private static void realizarOperacion(Stack<Double> numeros, Stack<String> operadores) {
         String op = operadores.pop();
-        if (op.equals("√")) {
-            double numero = numeros.pop();
-            if (numero >= 0) {
-                numeros.push(Math.sqrt(numero));
-            } else {
-                throw new ArithmeticException("No se puede calcular la raíz cuadrada de un número negativo");
-            }
-        } else {
-            double numero2 = numeros.pop();
-            double numero1 = numeros.pop();
-            switch (op) {
-            
-            case "√":
+        double numero1, numero2;
+        switch (op) {
+            case "+":
+                numero2 = numeros.pop();
+                numero1 = numeros.pop();
                 numeros.push(numero1 + numero2);
                 break;
-            
-            
-                case "+":
-                    numeros.push(numero1 + numero2);
-                    break;
-                case "-":
-                    numeros.push(numero1 - numero2);
-                    break;
-                    
-                    
-                    
-                case "x":
-                    numeros.push(numero1 * numero2);
-                    break;
-                case "/":
-                    if (numero2 != 0) {
-                        numeros.push(numero1 / numero2);
-                    } else {
-                        throw new ArithmeticException("No se puede dividir por cero");
-                    }
-                    break;
-            }
+            case "-":
+                numero2 = numeros.pop();
+                numero1 = numeros.pop();
+                numeros.push(numero1 - numero2);
+                break;
+            case "x":
+                numero2 = numeros.pop();
+                numero1 = numeros.pop();
+                numeros.push(numero1 * numero2);
+                break;
+            case "/":
+                numero2 = numeros.pop();
+                numero1 = numeros.pop();
+                if (numero2 != 0) {
+                    numeros.push(numero1 / numero2);
+                } else {
+                    throw new ArithmeticException("No se puede dividir por cero");
+                }
+                break;
+            case "√":
+                
+                double numero = numeros.pop();
+                if (numero >= 0) {
+                    numeros.push(Math.sqrt(numero));
+                } else {
+                    throw new ArithmeticException("No se puede calcular la raíz cuadrada de un número negativo");
+                }
+                break;
         }
     }
 
@@ -174,4 +170,8 @@ public class calculadora {
             }
         }
     }
-}
+
+   
+    
+    }
+

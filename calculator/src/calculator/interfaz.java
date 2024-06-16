@@ -186,30 +186,9 @@ public class interfaz extends JFrame {
         	uno.setBorder(null);
         	uno.setBackground(new Color(0, 0, 0, 0));
         	uno.setBounds(10,222,52,61);
-        	uno.addActionListener(new ActionListener() {
-        public void actionPerformed(ActionEvent e) {
-        	contentPane.setBackground(Color.black); // Negro sin usar la palabra
-        	uno.setBackground(Color.black); // Negro sin usar la palabra
-            }
-        });
-        	uno.addMouseListener(new java.awt.event.MouseAdapter() {
-        public void mouseEntered(java.awt.event.MouseEvent evt) {
-        	contentPane.setBackground(Color.black);
-    
-                
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black); // Negro sin usar la palabra
-           
-            }
-        });
-        
         contentPane.add(uno);
-
         uno.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-             
              String IngreseNumero=operacion.getText()+uno.getText();      
             operacion.setText(IngreseNumero);    
             }
@@ -224,26 +203,8 @@ public class interfaz extends JFrame {
         dos.setBorder(null);
         dos.setBackground(new Color(0, 0, 0, 0));
         dos.setBounds(80, 222, 52, 61);
-        dos.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                dos.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        dos.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black);
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        
         contentPane.add(dos);
-
         dos.addActionListener(new ActionListener() {
-        	
             public void actionPerformed(ActionEvent e) {
             	String IngreseNumero=operacion.getText()+dos.getText();      
                 operacion.setText(IngreseNumero);    
@@ -259,23 +220,7 @@ public class interfaz extends JFrame {
         tres.setBorder(null);
         tres.setBackground(new Color(0, 0, 0, 0));
         tres.setBounds(150, 222, 52, 61);
-        tres.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                tres.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        tres.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black);
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        contentPane.add(tres);
-        
+          contentPane.add(tres);
         tres.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	String IngreseNumero=operacion.getText()+tres.getText();      
@@ -292,23 +237,7 @@ public class interfaz extends JFrame {
         cuatro.setBorder(null);
         cuatro.setBackground(new Color(0, 0, 0, 0));
         cuatro.setBounds(10, 284, 52, 61);
-        cuatro.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                cuatro.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        cuatro.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black);
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
         contentPane.add(cuatro);
-        
         cuatro.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	String IngreseNumero=operacion.getText()+cuatro.getText();      
@@ -324,55 +253,23 @@ public class interfaz extends JFrame {
         cinco.setBorder(null);
         cinco.setBackground(new Color(0, 0, 0, 0));
         cinco.setBounds(80, 284, 52, 61);
-        cinco.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                cinco.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        cinco.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black);
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
         contentPane.add(cinco);
-
         cinco.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	String IngreseNumero=operacion.getText()+cinco.getText();      
-                operacion.setText(IngreseNumero);    
-                
+                operacion.setText(IngreseNumero);          
             }
         });
-        JButton seis = new JButton("6\r\n");
+        
+        JButton seis = new JButton("6");
         seis.setIcon(new ImageIcon("C:\\Users\\Guillermo\\Desktop\\proyecto\\calculadora\\calculator\\numeros.jpg"));
         seis.setHorizontalTextPosition(SwingConstants.CENTER);
         seis.setForeground(Color.WHITE);
         seis.setFont(new Font("Arial", Font.BOLD, 20));
         seis.setBorder(null);
         seis.setBackground(new Color(0, 0, 0, 0));
-        seis.setBounds(150, 284, 51, 60);
-        seis.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                seis.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        seis.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black);
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
+        seis.setBounds(150, 284, 52, 61);
         contentPane.add(seis);
-        
         seis.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	String IngreseNumero=operacion.getText()+seis.getText();      
@@ -388,23 +285,7 @@ public class interfaz extends JFrame {
         siete.setBorder(null);
         siete.setBackground(new Color(0, 0, 0, 0));
         siete.setBounds(10, 346, 52, 61);
-        siete.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                siete.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        siete.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black);
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
         contentPane.add(siete);
-        
         siete.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
             	String IngreseNumero=operacion.getText()+siete.getText();      
@@ -421,21 +302,7 @@ public class interfaz extends JFrame {
         ocho.setBorder(null);
         ocho.setBackground(new Color(0, 0, 0, 0));
         ocho.setBounds(80, 346, 52, 61);
-        ocho.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                ocho.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        ocho.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(Color.black);
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
+        
         contentPane.add(ocho);
 
         ocho.addActionListener(new ActionListener() {
@@ -454,10 +321,6 @@ public class interfaz extends JFrame {
         nueve.setBorder(null);
         nueve.setBackground(new Color(0, 0, 0, 0));
         nueve.setBounds(150, 346,  52, 61);
-        
-      
-       
- 
         contentPane.add(nueve);
 
         nueve.addActionListener(new ActionListener() {
@@ -476,21 +339,7 @@ public class interfaz extends JFrame {
         cero.setBorder(null);
         cero.setBackground(new Color(0, 0, 0, 0));
         cero.setBounds(10,395, 52, 61);
-        cero.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-                cero.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
-        cero.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0,0,0));
-            }
-
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                contentPane.setBackground(new Color(0, 0, 0)); // Negro sin usar la palabra
-            }
-        });
+       
         contentPane.add(cero);
         cero.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -540,7 +389,7 @@ public class interfaz extends JFrame {
             public void actionPerformed(ActionEvent e) {
             	
                 operador = "√";
-                operacion.setText(operador); 
+                operacion.setText(operacion.getText()+operador); 
                 
             }
         });
@@ -595,7 +444,7 @@ public class interfaz extends JFrame {
         btnB.setBackground(new Color(0, 0, 0, 0));
         btnB.setBounds(212, 82, 60, 34);
         
-        btnB.addActionListener(new ButtonActionHandler(operacion, resultado));
+        btnB.addActionListener(new pantalla(operacion, resultado));
         
         contentPane.add(btnB);
         
