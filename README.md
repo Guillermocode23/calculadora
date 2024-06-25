@@ -3,7 +3,7 @@
 
 Con 4 clases se creo una calculadora funcional usando eclipse atraves del lenguaje java en este repositorio
  en calculator---- src -------calculator tenemos el codigo del programa 
-en este repositorio se incluye la documentacion hecha por eclipse ide y al descargarse la carpeta funcona desde el index1.
+en este repositorio se incluye la documentacion hecha por eclipse ide y al descargarse la carpeta funciona desde el index1.
 
 
  ## Descripción General
