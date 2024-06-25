@@ -30,6 +30,8 @@ Interfaz de Usuario: Diseño limpio y accesible para una fácil navegación.
 | ----------------- | ------------------------------------------------------------------ |
 |Color base | ![#0a192f](https://via.placeholder.com/10/0a192f?text=+) black |
 |Boton  | ![#fe0000](https://via.placeholder.com/10/fe0000?text=+) #fe0000 |
+|Color font | ![White](https://via.placeholder.com/10/ffffff?text=+) #ffffff |
+|Font |  Arial bold  11 |
 
 ### Declaración de la Clase
 
